@@ -1,0 +1,10 @@
+import os
+list = []
+path_search = '\Program Files'
+
+for root, north, files in os.walk(path_search):
+    for file in files:
+        if '.exe' in file:
+            route = os.path.join(root, file).upper()
+            list.append(route)
+print(list)
